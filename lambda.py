@@ -4,9 +4,11 @@ people = [
     {"name":"x-man", "house": "Jorhat"}
 ]
 
-def f(person):
-    return person["house"]
+# def f(person):
+#     return person["house"]
 
-people.sort(key=f)
+# Instead of defining above function I can use lambda
+
+people.sort(key=lambda person: person["name"])
 
 print(people)
